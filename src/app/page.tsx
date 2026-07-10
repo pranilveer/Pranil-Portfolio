@@ -11,15 +11,15 @@ import ClientOnly from "@/components/ui/ClientOnly";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen w-full bg-white py-10 flex flex-col items-center justify-start">
+    <div className="relative min-h-screen w-full bg-white py-2 flex flex-col items-center justify-start">
       <Navbar />
 
       {/* Hero Section */}
-      <div className="group flex flex-col md:flex-row w-full min-h-[600px] sm:min-h-[700px] lg:h-[700] lg:-mb-2 xl:mb-0 xl:h-[846px] px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-center justify-center mt-6">
+      <div className="group flex flex-col md:flex-row w-full min-h-[500px] sm:min-h-[600px] lg:h-[700] lg:-mb-2 xl:mb-0 xl:h-[846px] px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-start justify-center">
         <div className="hidden lg:flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
-            Abhiruchi&apos;s exceptional product design ensured our website&apos;s success.
+            Pranil&apos;s exceptional product design ensured our website&apos;s success.
             <br />
             Highly recommended.
           </p>
@@ -28,18 +28,18 @@ export default function Home() {
         <div className="relative w-full flex flex-col items-center justify-center">
           <div className="flex w-full max-w-[952px] flex-col items-center justify-center  transition-all duration-300 ease-in-out group-hover:translate-y-[280px] group-hover:opacity-0 px-4 sm:px-6">
             <ClientOnly>
-              <button className="h-[45px] px-[26px] py-[13px] translate-y-0 md:translate-y-10 rounded-full border border-[#171717] flex items-center justify-center bg-white mt-10">
+              <button className="h-[45px] px-[26px] py-[2px] rounded-full border border-[#171717] flex items-center justify-center bg-white mt-2">
                 Hello!
               </button>
             </ClientOnly>
-            <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end mb-1 mt-6 sm:mt-8">
+            <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end -mt-4">
               <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
               <div className="flex items-end">
-                <CustomeText title="Abhiruchi" className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
+                <CustomeText title="Pranil" className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
                 <CustomeText title="," className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
               </div>
             </div>
-            <CustomeText title="Professional Designer" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px] text-center" />
+            <CustomeText title="Software Developer" className="text-[#171717] font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-7xl text-center whitespace-nowrap -mt-1" />
           </div>
 
           <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] mx-auto px-4">
@@ -80,14 +80,14 @@ export default function Home() {
             ))}
           </div>
           <h1 className="text-[32px] font-bold text-[#171717] leading-none whitespace-nowrap">
-            10 Years
+            2 Years
           </h1>
           <p className="text-sm text-[#171717]">Experience</p>
         </div>
       </div>
 
       {/* Services */}
-      <div className="relative flex flex-col w-full min-h-[878px] gap-16 sm:gap-[96px] items-center px-4 sm:px-6 lg:px-[71px] py-16 sm:py-[116px] bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -translate-y-8 sm:-translate-y-0 md:-translate-y-15 lg:translate-y-0 -mt-14">
+      <div className="relative flex flex-col w-full min-h-[878px] gap-16 sm:gap-[96px] items-center px-4 sm:px-6 lg:px-[71px] pt-8 sm:pt-12 pb-16 sm:pb-[116px] bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -translate-y-8 sm:-translate-y-0 md:-translate-y-15 lg:translate-y-0 -mt-14">
         <Image
           src="/Frame 77.svg"
           alt="image"
