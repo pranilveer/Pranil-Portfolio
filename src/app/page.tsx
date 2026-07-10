@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="group flex flex-col md:flex-row w-full min-h-[500px] sm:min-h-[600px] lg:h-[700] lg:-mb-2 xl:mb-0 xl:h-[846px] px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-start justify-center">
+      <div className="group flex flex-col md:flex-row w-full h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-start justify-center">
         <div className="hidden lg:flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
@@ -42,7 +42,7 @@ export default function Home() {
             <CustomeText title="Software Developer" className="text-[#171717] font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-7xl text-center whitespace-nowrap -mt-1" />
           </div>
 
-          <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] mx-auto px-4">
+          <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] -mb-[10%] sm:-mb-[15%] md:-mb-[20%] mx-auto px-4">
             <div className="absolute bottom-0 z-0 w-[90%] max-w-[812px] aspect-[2/1] overflow-hidden flex items-center justify-center pointer-events-auto">
               <div className="absolute w-full h-full bg-[#FEB273] rounded-t-full" />
             </div>
@@ -87,7 +87,7 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <div className="relative flex flex-col w-full min-h-[878px] gap-16 sm:gap-[96px] items-center px-4 sm:px-6 lg:px-[71px] pt-8 sm:pt-12 pb-16 sm:pb-[116px] bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -translate-y-8 sm:-translate-y-0 md:-translate-y-15 lg:translate-y-0 -mt-14">
+      <div className="relative flex flex-col min-h-[878px] gap-16 sm:gap-[96px] items-center px-4 sm:px-6 lg:px-[71px] pt-8 sm:pt-12 pb-16 sm:pb-[116px] bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -mt-14 mx-4 sm:mx-6 lg:mx-[71px]">
         <Image
           src="/Frame 77.svg"
           alt="image"
