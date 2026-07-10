@@ -87,7 +87,7 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <div className="relative flex flex-col min-h-[878px] gap-16 sm:gap-[96px] items-center px-4 sm:px-6 lg:px-[71px] pt-8 sm:pt-12 pb-16 sm:pb-[116px] bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -mt-14 mx-4 sm:mx-6 lg:mx-[71px]">
+      <div className="relative flex flex-col gap-10 sm:gap-16 items-center px-4 sm:px-6 lg:px-[71px] pt-12 sm:pt-16 pb-16 sm:pb-24 bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -mt-14 mx-4 sm:mx-6 lg:mx-[71px]">
         <Image
           src="/Frame 77.svg"
           alt="image"
@@ -110,7 +110,7 @@ export default function Home() {
           <GenericSlider
             data={cardData}
             slidesPerView={3}
-            heightClass="h-[500px] sm:h-[550px]"
+            heightClass="h-[380px] sm:h-[430px]"
             cardType="hover"
           />
         </div>
