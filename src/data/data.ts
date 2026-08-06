@@ -76,7 +76,7 @@ export const hero = {
   lastName: "Veer,",
   headline: "Full Stack Software Developer",
   intro:
-    "Full Stack Software Developer with experience building scalable web applications using React, Next.js, TypeScript, Node.js, Express, MongoDB, PostgreSQL and AWS. Passionate about creating high-performance products with clean architecture and exceptional user experiences.",
+    "Full Stack Developer building scalable web apps with React, Next.js, Node.js and AWS focused on clean architecture and great user experiences.",
   quoteLine1: "I don't just write code.",
   quoteLine2: "I build products that people actually use.",
   years: "2+ Years",

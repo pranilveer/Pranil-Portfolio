@@ -12,13 +12,13 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="relative w-full max-w-[1298px] h-[50px] sm:h-[56px] lg:h-[60px] bg-[#171717] text-white px-10 lg:px-2.5 rounded-[25px] sm:rounded-[35px] lg:rounded-[50px] backdrop-blur-[15px] border border-white mx-auto flex items-center justify-between z-50">
+        <nav className="relative w-full max-w-[1298px] h-[50px] sm:h-[56px] lg:h-[56px] bg-[#171717] text-white px-10 lg:px-2.5 rounded-[25px] sm:rounded-[35px] lg:rounded-[50px] backdrop-blur-[15px] border border-white mx-auto flex items-center justify-between z-50">
             {/* Left Menu (Desktop) */}
             <div className="hidden lg:flex flex-1 justify-start gap-2.5">
                 {navItems.slice(0, 3).map((item) => (
                     <button
                         key={item}
-                        className={`w-[120px] h-[46px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
+                        className={`w-[90px] h-[38px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
                         onClick={() => setSelected(item)}
                     >
                         {item}
@@ -41,7 +41,7 @@ const Navbar = () => {
                 {navItems.slice(3).map((item) => (
                     <button
                         key={item}
-                        className={`w-[120px] h-[46px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
+                        className={`w-[90px] h-[38px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
                         onClick={() => setSelected(item)}
                     >
                         {item}

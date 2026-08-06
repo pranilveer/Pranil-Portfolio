@@ -16,7 +16,7 @@ export default function DualToggleButtons() {
   ];
 
   return (
-    <div className="flex border-b-2 border-white bg-white/10 backdrop-blur-[5px] rounded-full gap-2 p-[6px] w-fit h-[56px] items-center justify-center">
+    <div className="flex border-1 border-white bg-white/10 backdrop-blur-[5px] rounded-full gap-2 p-[6px] w-fit h-[52px] items-center justify-center">
       {options.map((option) => (
         <button
           key={option.key}

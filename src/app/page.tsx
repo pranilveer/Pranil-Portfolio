@@ -28,19 +28,19 @@ export default function Home() {
         <div className="relative w-full flex flex-col items-center justify-start">
           <div className="flex w-full max-w-[952px] flex-col items-center justify-center  transition-all duration-300 ease-in-out group-hover:translate-y-[280px] group-hover:opacity-0 px-4 sm:px-6">
             <ClientOnly>
-              <button className="h-[45px] px-[26px] py-[2px] rounded-full border border-[#171717] flex items-center justify-center bg-white">
+              <button className="h-[40px] px-[16px] py-[2px] rounded-full border border-[#171717] flex items-center justify-center bg-white mt-1">
                 {hero.badge}
               </button>
             </ClientOnly>
             <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end -mt-4">
-              <CustomeText title={hero.prefix} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
+              <CustomeText title={hero.prefix} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
               <div className="flex items-end">
-                <CustomeText title={hero.name} className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
-                <CustomeText title={hero.lastName} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
+                <CustomeText title={hero.name} className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
+                <CustomeText title={hero.lastName} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
               </div>
             </div>
             <CustomeText title={hero.headline} className="text-[#171717] font-semibold text-lg sm:text-2xl md:text-3xl xl:text-5xl text-center -mt-1" />
-            <p className="mt-3 w-full min-w-0 max-w-[640px] text-center text-[#344054] text-[11px] sm:text-sm md:text-base lg:text-lg leading-relaxed whitespace-nowrap overflow-hidden text-ellipsis">
+            <p className="mt-3 w-full min-w-0 text-center text-[#344054] text-[11px] sm:text-sm md:text-base lg:text-lg leading-relaxed">
               {hero.intro}
             </p>
           </div>
