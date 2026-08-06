@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 import OrangeButton from "@/components/ui/OrangeButton";
 import ArrowButton from "@/components/ui/ArrowButton";
-import { experiences, buttons, iconAndText, skills, blogs, portfolioData, cardData, reviews } from '../data/data';
+import { hero, servicesData, experiences, stats, buttons, iconAndText, skills, blogs, portfolioData, reviews } from '../data/data';
 import { GenericSlider } from "@/components/ui/GenericSlider";
 import ClientOnly from "@/components/ui/ClientOnly";
 
@@ -15,34 +15,37 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="group flex flex-col md:flex-row w-full h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-start justify-center">
-        <div className="hidden lg:flex flex-col w-[328px] h-[138px] items-start justify-start transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
+      <div className="group flex flex-col md:flex-row w-full h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-stretch justify-center">
+        <div className="hidden lg:flex flex-col w-[328px] items-start justify-center transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
-            Pranil&apos;s exceptional product design ensured our website&apos;s success.
+            {hero.quoteLine1}
             <br />
-            Highly recommended.
+            {hero.quoteLine2}
           </p>
         </div>
 
-        <div className="relative w-full flex flex-col items-center justify-center">
+        <div className="relative w-full flex flex-col items-center justify-start">
           <div className="flex w-full max-w-[952px] flex-col items-center justify-center  transition-all duration-300 ease-in-out group-hover:translate-y-[280px] group-hover:opacity-0 px-4 sm:px-6">
             <ClientOnly>
-              <button className="h-[45px] px-[26px] py-[2px] rounded-full border border-[#171717] flex items-center justify-center bg-white mt-2">
-                Hello!
+              <button className="h-[45px] px-[26px] py-[2px] rounded-full border border-[#171717] flex items-center justify-center bg-white">
+                {hero.badge}
               </button>
             </ClientOnly>
             <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end -mt-4">
-              <CustomeText title="I&apos;m" className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
+              <CustomeText title={hero.prefix} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
               <div className="flex items-end">
-                <CustomeText title="Pranil" className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
-                <CustomeText title="," className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
+                <CustomeText title={hero.name} className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
+                <CustomeText title={hero.lastName} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[88px]" />
               </div>
             </div>
-            <CustomeText title="Software Developer" className="text-[#171717] font-semibold text-3xl sm:text-4xl md:text-5xl xl:text-7xl text-center whitespace-nowrap -mt-1" />
+            <CustomeText title={hero.headline} className="text-[#171717] font-semibold text-lg sm:text-2xl md:text-3xl xl:text-5xl text-center -mt-1" />
+            <p className="mt-3 w-full min-w-0 max-w-[640px] text-center text-[#344054] text-[11px] sm:text-sm md:text-base lg:text-lg leading-relaxed whitespace-nowrap overflow-hidden text-ellipsis">
+              {hero.intro}
+            </p>
           </div>
 
-          <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] -mb-[10%] sm:-mb-[15%] md:-mb-[20%] mx-auto px-4">
+          <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] mx-auto px-4">
             <div className="absolute bottom-0 z-0 w-[90%] max-w-[812px] aspect-[2/1] overflow-hidden flex items-center justify-center pointer-events-auto">
               <div className="absolute w-full h-full bg-[#FEB273] rounded-t-full" />
             </div>
@@ -73,16 +76,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hidden lg:flex w-[169px] h-[125px] flex-col items-end justify-end gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
+        <div className="hidden lg:flex w-[169px] flex-col items-end justify-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={32} fill="#FD853A" stroke="#FD853A" />
             ))}
           </div>
           <h1 className="text-[32px] font-bold text-[#171717] leading-none whitespace-nowrap">
-            2 Years
+            {hero.years}
           </h1>
-          <p className="text-sm text-[#171717]">Experience</p>
+          <p className="text-sm text-[#171717]">{hero.experienceLabel}</p>
         </div>
       </div>
 
@@ -101,14 +104,14 @@ export default function Home() {
             <CustomeText title="Services" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#FD853A]" />
           </div>
           <p className="w-full lg:w-[578px] font-medium text-base sm:text-lg lg:text-[20px] text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc,
-            posuere in justo vulputate, bibendum sodales
+            Building modern, scalable and maintainable products with a focus on
+            clean architecture, performance and intelligent AI-powered features.
           </p>
         </div>
 
         <div className="relative w-full max-w-[1299px] flex items-start justify-center">
           <GenericSlider
-            data={cardData}
+            data={servicesData}
             slidesPerView={3}
             heightClass="h-[380px] sm:h-[430px]"
             cardType="hover"
@@ -135,10 +138,17 @@ export default function Home() {
 
                 <div className="flex-1">
                   <CustomeText title={exp.company} className="font-semibold text-[#1D2939] text-[20px] sm:text-[24px] mb-1" />
-                  <CustomeText title={exp.duration} className="text-[#98A2B3] text-[14px] sm:text-[16px] mb-2" />
+                  <CustomeText title={`${exp.duration} • ${exp.location}`} className="text-[#98A2B3] text-[14px] sm:text-[16px] mb-2" />
                   <CustomeText title={exp.role} className="font-semibold text-[#1D2939] text-[18px] sm:text-[20px] mb-2" />
-                  {exp.desc && (
-                    <CustomeText title={exp.desc} className="text-[#98A2B3] text-[14px] sm:text-[16px] leading-relaxed" />
+                  {exp.highlights.length > 0 && (
+                    <ul className="flex flex-col gap-1.5">
+                      {exp.highlights.map((point, i) => (
+                        <li key={i} className="flex items-start gap-2 text-[#98A2B3] text-[14px] sm:text-[16px] leading-relaxed">
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[#FD853A] flex-shrink-0" />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
                   )}
                 </div>
               </div>
@@ -151,7 +161,7 @@ export default function Home() {
             {experiences.map((exp, index) => (
               <div key={index} className="flex flex-col gap-[14px]">
                 <CustomeText title={exp.company} className="font-semibold text-[#1D2939] text-[40px]" />
-                <CustomeText title={exp.duration} className="text-2xl text-[#98A2B3]" />
+                <CustomeText title={`${exp.duration} • ${exp.location}`} className="text-2xl text-[#98A2B3]" />
               </div>
             ))}
           </div>
@@ -170,8 +180,15 @@ export default function Home() {
             {experiences.map((exp, index) => (
               <div key={index} className="flex flex-col gap-[14px]">
                 <CustomeText title={exp.role} className="font-semibold text-[#1D2939] text-[40px]" />
-                {exp.desc && (
-                  <CustomeText title={exp.desc} className="text-2xl text-[#98A2B3]" />
+                {exp.highlights.length > 0 && (
+                  <ul className="flex flex-col gap-2">
+                    {exp.highlights.map((point, i) => (
+                      <li key={i} className="flex items-start gap-3 text-2xl text-[#98A2B3]">
+                        <span className="mt-3 w-2 h-2 rounded-full bg-[#FD853A] flex-shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                  </ul>
                 )}
               </div>
             ))}
@@ -207,30 +224,24 @@ export default function Home() {
           </div>
 
           <p className="text-[#98A2B3] text-base sm:text-lg lg:text-xl leading-relaxed max-w-md">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales.
+            I enjoy solving real-world business problems by combining modern
+            frontend development, scalable backend architecture, cloud
+            technologies and AI integrations.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-8 w-full">
-            <div className="flex flex-col">
-              <CustomeText
-                title="450+"
-                className="text-[32px] sm:text-[36px] font-medium text-[#1D2939]"
-              />
-              <CustomeText
-                title="Project Completed"
-                className="text-lg text-[#667085]"
-              />
-            </div>
-            <div className="flex flex-col">
-              <CustomeText
-                title="450+"
-                className="text-[32px] sm:text-[36px] font-medium text-[#1D2939]"
-              />
-              <CustomeText
-                title="Project Completed"
-                className="text-lg text-[#667085]"
-              />
-            </div>
+          <div className="flex flex-wrap gap-x-12 gap-y-8 w-full">
+            {stats.map((stat, index) => (
+              <div key={index} className="flex flex-col">
+                <CustomeText
+                  title={stat.title}
+                  className="text-[32px] sm:text-[36px] font-medium text-[#1D2939]"
+                />
+                <CustomeText
+                  title={stat.label}
+                  className="text-lg text-[#667085]"
+                />
+              </div>
+            ))}
           </div>
 
           <ClientOnly>
@@ -290,7 +301,7 @@ export default function Home() {
           <div className="flex flex-col w-full max-w-[742px] items-start gap-6 px-4 sm:px-0">
             <div className="flex flex-col sm:flex-row w-full items-start sm:items-center gap-4 sm:gap-[18px]">
               <CustomeText
-                title="Lirante - Food Delivery Solution"
+                title="Bynaus AI - Construction Management Platform"
                 className="font-bold text-[28px] sm:text-[32px] lg:text-[40px] text-[#344054]"
               />
               <div className="w-[50px] h-[50px] sm:w-[58px] sm:h-[58px] rounded-full bg-[#FD853A] hidden md:flex items-center justify-center transition-all duration-300">
@@ -298,7 +309,7 @@ export default function Home() {
               </div>
             </div>
             <p className="text-[16px] sm:text-[18px] lg:text-[20px] text-[#344054] text-center sm:text-left">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis orci elementum egestas lobortis.
+              An AI-powered construction management platform featuring OCR, vector search, voice reporting and a microservices architecture built with React, Node.js, AWS, Docker, MongoDB and PostGIS.
             </p>
           </div>
         </div>
@@ -331,7 +342,8 @@ export default function Home() {
             </div>
           </div>
           <p className="w-full max-w-[742px] text-[16px] sm:text-[18px] lg:text-[20px] text-[#F9FAFB] text-center leading-[1.6] px-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed congue interdum ligula a dignissim.
+            Here's what teams and founders say about working with me across
+            production AI platforms, e-commerce and product development.
           </p>
         </div>
 
@@ -350,16 +362,16 @@ export default function Home() {
       <div className="w-full bg-white flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-[71px] gap-10">
         <div className="w-full max-w-4xl text-center flex flex-col items-center gap-4">
           <CustomeText
-            title="Have an Awesome Project"
+            title="Let's Build Something"
             className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-[#344054]"
           />
           <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
             <CustomeText
-              title="Idea?"
+              title="Amazing"
               className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-[#344054]"
             />
             <CustomeText
-              title="Let's Discuss"
+              title="Together"
               className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-[#FD853A]"
             />
           </div>
@@ -383,7 +395,7 @@ export default function Home() {
             />
 
             <button className="w-fit px-6 md:px-12 py-1 md:py-3 rounded-full bg-[#FD853A] hover:bg-[#e4752f] text-white text-lg font-semibold transition duration-300">
-              Send
+              Send Message
             </button>
           </ClientOnly>
         </div>

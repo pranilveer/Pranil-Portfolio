@@ -1,16 +1,9 @@
 "use client"
 import React, { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { navItems } from '@/data/data'
 
 const Navbar = () => {
-    const menuItems = [
-        { label: "Home" },
-        { label: "About" },
-        { label: "Service" },
-        { label: "Resume" },
-        { label: "Project" },
-        { label: "Contact" },
-    ];
     const [selected, setSelected] = useState("Home");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -22,13 +15,13 @@ const Navbar = () => {
         <nav className="relative w-full max-w-[1298px] h-[50px] sm:h-[56px] lg:h-[60px] bg-[#171717] text-white px-10 lg:px-2.5 rounded-[25px] sm:rounded-[35px] lg:rounded-[50px] backdrop-blur-[15px] border border-white mx-auto flex items-center justify-between z-50">
             {/* Left Menu (Desktop) */}
             <div className="hidden lg:flex flex-1 justify-start gap-2.5">
-                {menuItems.slice(0, 3).map((item) => (
+                {navItems.slice(0, 3).map((item) => (
                     <button
-                        key={item.label}
-                        className={`w-[120px] h-[46px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item.label ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
-                        onClick={() => setSelected(item.label)}
+                        key={item}
+                        className={`w-[120px] h-[46px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
+                        onClick={() => setSelected(item)}
                     >
-                        {item.label}
+                        {item}
                     </button>
                 ))}
             </div>
@@ -44,14 +37,14 @@ const Navbar = () => {
             </div>
 
             {/* Right Menu (Desktop) */}
-            <div className="hidden lg:flex flex-1 justify-end gap-4">
-                {menuItems.slice(3).map((item) => (
+            <div className="hidden lg:flex flex-1 justify-end items-center gap-4">
+                {navItems.slice(3).map((item) => (
                     <button
-                        key={item.label}
-                        className={`w-[120px] h-[46px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item.label ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
-                        onClick={() => setSelected(item.label)}
+                        key={item}
+                        className={`w-[120px] h-[46px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
+                        onClick={() => setSelected(item)}
                     >
-                        {item.label}
+                        {item}
                     </button>
                 ))}
             </div>
@@ -68,16 +61,16 @@ const Navbar = () => {
             {isMobileMenuOpen && (
                 <div className="absolute top-[100%] left-0 right-0 mt-2 bg-[#171717] rounded-[25px] border border-white backdrop-blur-[15px] lg:hidden z-40">
                     <div className="flex flex-col p-4 gap-2">
-                        {menuItems.map((item) => (
+                        {navItems.map((item) => (
                             <button
-                                key={item.label}
-                                className={`w-full h-[40px] flex items-center justify-center rounded-[25px] text-sm font-medium transition duration-300 ${selected === item.label ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
+                                key={item}
+                                className={`w-full h-[40px] flex items-center justify-center rounded-[25px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
                                 onClick={() => {
-                                    setSelected(item.label);
+                                    setSelected(item);
                                     setIsMobileMenuOpen(false);
                                 }}
                             >
-                                {item.label}
+                                {item}
                             </button>
                         ))}
                     </div>

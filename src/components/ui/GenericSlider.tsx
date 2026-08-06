@@ -50,15 +50,19 @@ export function GenericSlider<T extends AllowedCard>({
           <div className="flex gap-4 overflow-x-auto">
             {data.slice(0, 3).map((item, index) => (
               <div key={index} className="flex-shrink-0 w-full max-w-sm">
-                {cardType === 'hover' && 'title' in item && 'imageSrc' in item && (
-                  <ServicesCard title={item.title} imageSrc={item.imageSrc} priority={index === 0} />
+                {cardType === 'hover' && 'title' in item && 'description' in item && 'tech' in item && (
+                  <ServicesCard title={item.title} description={item.description} tech={item.tech} />
                 )}
-                {cardType === 'portfolio' && 'image' in item && 'href' in item && 'desc' in item && (
+                {cardType === 'portfolio' && 'image' in item && 'href' in item && 'desc' in item && 'tags' in item && (
                   <PortfolioCard
                     image={item.image}
                     title={item.title}
                     href={item.href}
                     desc={item.desc}
+                    tags={item.tags}
+                    liveDemo={item.liveDemo}
+                    github={item.github}
+                    caseStudy={item.caseStudy}
                     priority={index === 0}
                   />
                 )}
@@ -130,15 +134,19 @@ export function GenericSlider<T extends AllowedCard>({
               key={index}
               className={`${isReview ? '!w-full sm:!w-[90%] md:!w-[784px]' : '!flex justify-center'}`}
             >
-              {cardType === 'hover' && 'title' in item && 'imageSrc' in item && (
-                <ServicesCard title={item.title} imageSrc={item.imageSrc} priority={index === 0} />
+              {cardType === 'hover' && 'title' in item && 'description' in item && 'tech' in item && (
+                <ServicesCard title={item.title} description={item.description} tech={item.tech} />
               )}
-              {cardType === 'portfolio' && 'image' in item && 'href' in item && 'desc' in item && (
+              {cardType === 'portfolio' && 'image' in item && 'href' in item && 'desc' in item && 'tags' in item && (
                 <PortfolioCard
                   image={item.image}
                   title={item.title}
                   href={item.href}
                   desc={item.desc}
+                  tags={item.tags}
+                  liveDemo={item.liveDemo}
+                  github={item.github}
+                  caseStudy={item.caseStudy}
                   priority={index === 0}
                 />
               )}

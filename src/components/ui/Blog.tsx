@@ -48,7 +48,7 @@ const Blog: React.FC<BlogProps> = ({ image, button, name, date, title, priority 
         </div>
 
         <h3 className="w-[416px] h-[84px] text-[32px] text-[#344054]">
-          {title ?? 'Design Unraveled: Behind the Scenes of UI/UX Magic'}
+          {title}
         </h3>
       </div>
     </div>

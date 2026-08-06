@@ -7,7 +7,17 @@ interface PortfolioCardProps extends PortfolioItem {
   priority?: boolean;
 }
 
-const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, title, href, desc, priority = false }) => {
+const PortfolioCard: React.FC<PortfolioCardProps> = ({
+  image,
+  title,
+  href,
+  desc,
+  tags,
+  liveDemo,
+  github,
+  caseStudy,
+  priority = false,
+}) => {
   return (
     <div
       className="relative group 
@@ -79,6 +89,37 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ image, title, href, desc,
           <p className="text-white text-sm leading-relaxed text-center">
             {desc}
           </p>
+
+          {/* Tech Badges */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-3">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 rounded-full bg-[#FD853A] text-white text-[11px] md:text-sm font-medium"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-wrap justify-center md:justify-start gap-2 mt-3">
+            {[
+              { label: "Live Demo", url: liveDemo },
+              { label: "GitHub", url: github },
+              { label: "Case Study", url: caseStudy },
+            ].map((btn) => (
+              <a
+                key={btn.label}
+                href={btn.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 rounded-full border border-[#FD853A] text-white text-xs md:text-sm font-medium hover:bg-[#FD853A] transition-colors duration-300"
+              >
+                {btn.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </div>

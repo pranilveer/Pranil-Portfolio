@@ -1,0 +1,57 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R /F1-B 5 0 R >> >> /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 1779 >>
+stream
+/F1-B 24 Tf 1 0 0 1 72 720 Tm (PRANIL VEER) Tj
+/F1 14 Tf 1 0 0 1 72 696 Tm (Full Stack Software Developer) Tj
+/F1 11 Tf 1 0 0 1 72 680 Tm (veerpranil@gmail.com  |  +91 7559155588  |  Kolhapur, Maharashtra) Tj
+/F1 11 Tf 1 0 0 1 72 666 Tm (github.com/pranilveer  |  linkedin.com/in/pranilveer) Tj
+/F1 11 Tf 1 0 0 1 72 650 Tm ( ) Tj
+/F1-B 12 Tf 1 0 0 1 72 636 Tm (EXPERIENCE) Tj
+/F1-B 12 Tf 1 0 0 1 72 618 Tm (Jr. Software Developer  |  Walstar Technologies Pvt. Ltd) Tj
+/F1 10 Tf 1 0 0 1 72 602 Tm (April 2025 - Present  |  Kolhapur) Tj
+/F1 10 Tf 1 0 0 1 72 584 Tm (- Built production-grade web applications using React, Next.js and TypeScript.) Tj
+/F1 10 Tf 1 0 0 1 72 572 Tm (- Developed scalable backend APIs using Node.js and Express.) Tj
+/F1 10 Tf 1 0 0 1 72 560 Tm (- Optimized databases and backend performance.) Tj
+/F1 10 Tf 1 0 0 1 72 548 Tm (- Worked in Agile teams using GitHub, Bitbucket and Jira.) Tj
+/F1 10 Tf 1 0 0 1 72 536 Tm (- Built reusable UI components using MUI and Tailwind CSS.) Tj
+/F1 11 Tf 1 0 0 1 72 518 Tm ( ) Tj
+/F1-B 12 Tf 1 0 0 1 72 504 Tm (PROJECTS) Tj
+/F1 10 Tf 1 0 0 1 72 486 Tm (Bynaus AI  -  AI-powered construction management platform \(OCR, vector search, microservices\).) Tj
+/F1 10 Tf 1 0 0 1 72 474 Tm (Lerbee  -  Global shopping platform with automation features and Telegram integration.) Tj
+/F1 10 Tf 1 0 0 1 72 462 Tm (Granulr  -  AI-powered habit tracking application integrating digital and physical tracking.) Tj
+/F1 11 Tf 1 0 0 1 72 444 Tm ( ) Tj
+/F1-B 12 Tf 1 0 0 1 72 430 Tm (SKILLS) Tj
+/F1 10 Tf 1 0 0 1 72 412 Tm (React, Next.js, TypeScript, JavaScript, Node.js, Express, MongoDB, PostgreSQL, AWS, Docker,) Tj
+/F1 10 Tf 1 0 0 1 72 400 Tm (OpenAI, REST APIs, Tailwind CSS, Material UI, Git, GitHub, CI/CD, OCR, System Design.) Tj
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000253 00000 n 
+0000000323 00000 n 
+0000000398 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2229
+%%EOF
