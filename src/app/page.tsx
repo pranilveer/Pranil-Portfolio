@@ -361,7 +361,7 @@ export default function Home() {
             </div>
           </div>
           <p className="w-full max-w-[742px] text-[16px] sm:text-[18px] lg:text-[20px] text-[#F9FAFB] text-center leading-[1.6] px-2">
-            Here's what teams and founders say about working with me across
+            Here&apos;s what teams and founders say about working with me across
             production AI platforms, e-commerce and product development.
           </p>
         </div>
