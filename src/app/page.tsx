@@ -15,8 +15,8 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div id="home" className="group flex flex-col md:flex-row w-full h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-stretch justify-center">
-        <div className="hidden lg:flex flex-col w-[328px] items-start justify-center transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
+      <div id="home" className="group flex flex-col md:flex-row w-full min-h-[calc(100dvh-66px)] sm:min-h-[calc(100dvh-72px)] md:h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-stretch justify-center">
+        <div className="hidden lg:flex flex-col w-[200px] items-start justify-center transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
             {hero.quoteLine1}
@@ -25,32 +25,51 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="relative w-full flex flex-col items-center justify-start">
+        <div className="relative w-full flex-1 flex flex-col items-center justify-start">
           <div className="flex w-full max-w-[952px] flex-col items-center justify-center  transition-all duration-300 ease-in-out group-hover:translate-y-[280px] group-hover:opacity-0 px-4 sm:px-6">
             <ClientOnly>
-              <button className="h-[40px] px-[16px] py-[2px] rounded-full border border-[#171717] flex items-center justify-center bg-white mt-1">
+              <button className="h-[40px] px-[16px] py-[2px] rounded-full border border-[#171717] flex items-center justify-center bg-white mt-1 mb-3 lg:mb-0">
                 {hero.badge}
               </button>
             </ClientOnly>
-            <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end -mt-4">
+            <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end lg:-mt-4">
               <CustomeText title={hero.prefix} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
               <div className="flex items-end">
                 <CustomeText title={hero.name} className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
                 <CustomeText title={hero.lastName} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
               </div>
             </div>
-            <CustomeText title={hero.headline} className="text-[#171717] font-semibold text-lg sm:text-2xl md:text-3xl xl:text-5xl text-center -mt-1" />
-            <p className="mt-3 w-full min-w-0 text-center text-[#344054] text-[11px] sm:text-sm md:text-base lg:text-lg leading-relaxed">
+            <CustomeText title={hero.headline} className="text-[#171717] font-semibold text-lg sm:text-2xl md:text-3xl xl:text-4xl xl:whitespace-nowrap text-center -mt-1" />
+            <p className="mt-3 w-full min-w-0 text-center text-[#344054] text-sm md:text-base lg:text-lg leading-relaxed">
               {hero.intro}
             </p>
+
+            <div className="lg:hidden flex flex-col items-center justify-center mt-6 w-full">
+              <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
+              <p className="text-[#344054] text-[14px] font-medium leading-snug text-center max-w-[320px]">
+                {hero.quoteLine1}
+                <br />
+                {hero.quoteLine2}
+              </p>
+            </div>
+
+            <div className="lg:hidden flex flex-col items-center justify-center gap-1 mt-5">
+              <div className="flex gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={24} fill="#FD853A" stroke="#FD853A" />
+                ))}
+              </div>
+              <h1 className="text-[24px] font-bold text-[#171717] leading-none mt-1">{hero.years}</h1>
+              <p className="text-sm text-[#171717]">{hero.experienceLabel}</p>
+            </div>
           </div>
 
-          <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center -translate-y-[10%] sm:-translate-y-[15%] md:-translate-y-[20%] mx-auto px-4">
+          <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center translate-y-0 md:-translate-y-[20%] mx-auto px-4">
             <div className="absolute bottom-0 z-0 w-[90%] max-w-[812px] aspect-[2/1] overflow-hidden flex items-center justify-center pointer-events-auto">
               <div className="absolute w-full h-full bg-[#FEB273] rounded-t-full" />
             </div>
 
-            <div className="absolute z-10 transition-all duration-500 ease-in-out opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-105">
+            <div className="absolute z-10 transition-all duration-500 ease-in-out opacity-100 scale-100 lg:opacity-0 lg:scale-0 lg:group-hover:opacity-100 lg:group-hover:scale-105">
               <Image
                 src="/Frame 68.svg"
                 alt="Frame Decoration"
@@ -76,7 +95,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hidden lg:flex w-[169px] flex-col items-end justify-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
+        <div className="hidden lg:flex w-[200px] flex-col items-end justify-center gap-2 transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
               <Star key={i} size={32} fill="#FD853A" stroke="#FD853A" />
