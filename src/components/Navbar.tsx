@@ -11,6 +11,14 @@ const Navbar = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    const handleNavClick = (item: string) => {
+        setSelected(item);
+        const section = document.getElementById(item.toLowerCase());
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <nav className="relative w-full max-w-[1298px] h-[50px] sm:h-[56px] lg:h-[56px] bg-[#171717] text-white px-10 lg:px-2.5 rounded-[25px] sm:rounded-[35px] lg:rounded-[50px] backdrop-blur-[15px] border border-white mx-auto flex items-center justify-between z-50">
             {/* Left Menu (Desktop) */}
@@ -19,7 +27,7 @@ const Navbar = () => {
                     <button
                         key={item}
                         className={`w-[90px] h-[38px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
-                        onClick={() => setSelected(item)}
+                        onClick={() => handleNavClick(item)}
                     >
                         {item}
                     </button>
@@ -42,7 +50,7 @@ const Navbar = () => {
                     <button
                         key={item}
                         className={`w-[90px] h-[38px] flex items-center justify-center rounded-[60px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
-                        onClick={() => setSelected(item)}
+                        onClick={() => handleNavClick(item)}
                     >
                         {item}
                     </button>
@@ -66,7 +74,7 @@ const Navbar = () => {
                                 key={item}
                                 className={`w-full h-[40px] flex items-center justify-center rounded-[25px] text-sm font-medium transition duration-300 ${selected === item ? 'bg-[#FD853A] font-bold' : 'bg-transparent hover:bg-[#232323]'}`}
                                 onClick={() => {
-                                    setSelected(item);
+                                    handleNavClick(item);
                                     setIsMobileMenuOpen(false);
                                 }}
                             >

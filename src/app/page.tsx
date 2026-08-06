@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="group flex flex-col md:flex-row w-full h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-stretch justify-center">
+      <div id="home" className="group flex flex-col md:flex-row w-full h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-stretch justify-center">
         <div className="hidden lg:flex flex-col w-[328px] items-start justify-center transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
@@ -90,7 +90,7 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <div className="relative flex flex-col gap-10 sm:gap-16 items-center px-4 sm:px-6 lg:px-[71px] pt-12 sm:pt-16 pb-16 sm:pb-24 bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -mt-14 mx-4 sm:mx-6 lg:mx-[71px]">
+      <div id="about" className="relative flex flex-col gap-10 sm:gap-16 items-center px-4 sm:px-6 lg:px-[71px] pt-12 sm:pt-16 pb-16 sm:pb-24 bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -mt-14 mx-4 sm:mx-6 lg:mx-[71px]">
         <Image
           src="/Frame 77.svg"
           alt="image"
@@ -120,7 +120,7 @@ export default function Home() {
       </div>
 
       {/* Work Experience */}
-      <div className="w-full min-h-[600px] lg:h-[827px] flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
+      <div id="experience" className="w-full min-h-[600px] lg:h-[827px] flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
         <div className="w-full h-auto lg:h-[234px] flex lg:flex-row items-start justify-center space-x-2.5 mb-8 lg:mb-16 text-center lg:text-left">
           <CustomeText title="My" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#344054]" />
           <CustomeText title="Work" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#FD853A]" />
@@ -253,7 +253,7 @@ export default function Home() {
       </div>
 
       {/* Portfolio */}
-      <div className="w-full flex flex-col items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-20 gap-10 lg:gap-12">
+      <div id="projects" className="w-full flex flex-col items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-20 gap-10 lg:gap-12">
         <div className="w-full flex flex-col sm:flex-row justify-between items-start lg:items-center gap-6">
           <div className="flex flex-col items-start max-w-full lg:max-w-[643px]">
             <CustomeText
@@ -359,7 +359,7 @@ export default function Home() {
 
 
       {/* Contact */}
-      <div className="w-full bg-white flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-[71px] gap-10">
+      <div id="contact" className="w-full bg-white flex flex-col items-center justify-center py-16 px-4 sm:px-6 lg:px-[71px] gap-10">
         <div className="w-full max-w-4xl text-center flex flex-col items-center gap-4">
           <CustomeText
             title="Let's Build Something"
@@ -414,7 +414,7 @@ export default function Home() {
       </div>
 
       {/* Skills Slider */}
-      <div className="relative w-full h-[147px] bg-[#FB6514] rounded-tl-4xl rounded-br-4xl overflow-hidden">
+      <div id="skills" className="relative w-full h-[147px] bg-[#FB6514] rounded-tl-4xl rounded-br-4xl overflow-hidden">
         <div className="absolute w-[5000px] h-[63px] bg-white -rotate-2 -mt-2 md:mt-0 md:-rotate-[1.9deg] z-10 -ml-2 flex items-center">
           <div className="marquee flex gap-8 w-max">
             {[...skills, ...skills].map((skill, index) => (
