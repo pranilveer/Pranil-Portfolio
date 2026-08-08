@@ -34,9 +34,9 @@ export default function Home() {
             </ClientOnly>
             <div className="flex flex-col sm:flex-row sm:gap-2 items-center sm:items-end lg:-mt-4">
               <CustomeText title={hero.prefix} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
-              <div className="flex items-end">
+              <div className="flex items-end gap-2 sm:gap-1">
                 <CustomeText title={hero.name} className="text-[#FD853A] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
-                <CustomeText title={hero.lastName} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
+                <CustomeText title={ hero.lastName} className="text-[#171717] font-semibold text-4xl sm:text-5xl md:text-7xl xl:text-[70px]" />
               </div>
             </div>
             <CustomeText title={hero.headline} className="text-[#171717] font-semibold text-lg sm:text-2xl md:text-3xl xl:text-4xl xl:whitespace-nowrap text-center -mt-1" />
