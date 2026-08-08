@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div id="home" className="group flex flex-col md:flex-row w-full min-h-[calc(100dvh-66px)] sm:min-h-[calc(100dvh-72px)] md:h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-stretch justify-center">
+      <div id="home" className="group flex flex-col md:flex-row w-full min-h-[100dvh] md:h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-stretch justify-center">
         <div className="hidden lg:flex flex-col w-[200px] items-start justify-center transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
@@ -64,7 +64,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative w-full max-w-[952px] aspect-[3/2] flex flex-col items-center justify-center translate-y-0 md:-translate-y-[20%] mx-auto px-4">
+          <div className="relative w-full max-w-[952px] flex-1 md:flex-none md:aspect-[3/2] flex flex-col items-center justify-center translate-y-0 md:-translate-y-[20%] mx-auto px-4">
             <div className="absolute bottom-0 z-0 w-[90%] max-w-[812px] aspect-[2/1] overflow-hidden flex items-center justify-center pointer-events-auto">
               <div className="absolute w-full h-full bg-[#FEB273] rounded-t-full" />
             </div>
@@ -85,7 +85,7 @@ export default function Home() {
               alt="abhiruchi"
               width={952}
               height={636}
-              className="relative z-20 w-full h-auto object-contain mt-5"
+              className="absolute inset-0 z-20 w-full h-full object-cover md:static md:h-auto md:object-contain md:mt-5"
               priority
             />
 
