@@ -15,7 +15,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <div id="home" className="group flex flex-col md:flex-row w-full min-h-[100vh] md:h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-stretch justify-center">
+      <div id="home" className="group flex flex-col md:flex-row w-full min-h-[calc(100svh-58px)] sm:min-h-[calc(100svh-64px)] md:h-screen px-4 sm:px-6 md:px-8 gap-6 sm:gap-8 md:gap-[71px] items-stretch justify-center">
         <div className="hidden lg:flex flex-col w-[200px] items-start justify-center transition-transform duration-300 ease-in-out group-hover:-translate-y-[250px]">
           <div className="text-[#344054] text-[36px] leading-none">&quot;</div>
           <p className="text-[#344054] text-[16px] font-medium leading-snug">
@@ -85,7 +85,7 @@ export default function Home() {
               alt="abhiruchi"
               width={952}
               height={636}
-              className="absolute inset-0 z-20 w-full h-full object-cover md:static md:h-auto md:object-contain md:mt-5"
+              className="absolute inset-0 z-20 w-full h-full object-cover object-top md:static md:h-auto md:object-contain md:mt-5"
               priority
             />
 
@@ -109,7 +109,7 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <div id="about" className="relative flex flex-col w-full gap-10 sm:gap-16 items-center px-4 sm:px-6 lg:px-[71px] pt-12 sm:pt-16 pb-16 sm:pb-24 bg-[#171717] overflow-hidden -mt-14">
+      <div id="about" className="relative flex flex-col w-full gap-10 sm:gap-16 items-center px-4 sm:px-6 lg:px-[71px] pt-12 sm:pt-16 pb-16 sm:pb-24 bg-[#171717] overflow-hidden md:-mt-14">
         <Image
           src="/Frame 77.svg"
           alt="image"
