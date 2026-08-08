@@ -98,7 +98,7 @@ export function GenericSlider<T extends AllowedCard>({
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={20}
-          centeredSlides={isReview}
+          centeredSlides={false}
           loop={true}
           autoplay={{
             delay: 3000,
@@ -107,23 +107,23 @@ export function GenericSlider<T extends AllowedCard>({
           pagination={{ clickable: true }}
           breakpoints={{
             0: {
-              slidesPerView: isPortfolio ? 1 : 1,
+              slidesPerView: 1,
               spaceBetween: 16,
             },
             640: {
-              slidesPerView: isPortfolio || isBlog || isReview ? 1 : 2,
+              slidesPerView: 1,
               spaceBetween: 18,
             },
             850: {
-              slidesPerView: isPortfolio || isBlog || isReview ? 1 : 2,
+              slidesPerView: isReview ? 2 : 2,
               spaceBetween: 20,
             },
             1024: {
-              slidesPerView: isPortfolio ? 2 : Math.min(slidesPerView, 3),
+              slidesPerView: isPortfolio ? 2 : isReview ? 3 : Math.min(slidesPerView, 3),
               spaceBetween: 24,
             },
             1280: {
-              slidesPerView: isPortfolio ? 2 : slidesPerView,
+              slidesPerView: isPortfolio ? 2 : isReview ? 3 : slidesPerView,
               spaceBetween: 24,
             },
           }}
@@ -132,7 +132,7 @@ export function GenericSlider<T extends AllowedCard>({
           {data.map((item, index) => (
             <SwiperSlide
               key={index}
-              className={`${isReview ? '!w-full sm:!w-[90%] md:!w-[784px]' : '!flex justify-center'}`}
+              className={`${isReview ? '!flex' : '!flex justify-center'}`}
             >
               {cardType === 'hover' && 'title' in item && 'description' in item && 'tech' in item && (
                 <ServicesCard title={item.title} description={item.description} tech={item.tech} />

@@ -139,7 +139,7 @@ export default function Home() {
       </div>
 
       {/* Work Experience */}
-      <div id="experience" className="w-full min-h-[600px] lg:h-[827px] flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
+      <div id="experience" className="w-full min-h-[600px] flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
         <div className="w-full h-auto lg:h-[234px] flex lg:flex-row items-start justify-center space-x-2.5 mb-8 lg:mb-16 text-center lg:text-left">
           <CustomeText title="My" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#344054]" />
           <CustomeText title="Work" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#FD853A]" />
@@ -175,29 +175,21 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="w-full h-auto lg:h-[438px] hidden lg:flex justify-evenly">
-          <div className="flex flex-col justify-between w-[495px] h-[438px] gap-[102px]">
-            {experiences.map((exp, index) => (
-              <div key={index} className="flex flex-col gap-[14px]">
+        <div className="relative w-full hidden lg:block">
+          <div className="absolute top-0 bottom-0 left-[558px] w-[2px] border-l-2 border-dashed border-[#1D2939]" />
+          {experiences.map((exp, index) => (
+            <div key={index} className="relative grid grid-cols-[495px_48px_1fr] items-start gap-x-10 mb-16 last:mb-0">
+              <div className="flex flex-col gap-[14px]">
                 <CustomeText title={exp.company} className="font-semibold text-[#1D2939] text-[40px]" />
                 <CustomeText title={`${exp.duration} • ${exp.location}`} className="text-2xl text-[#98A2B3]" />
               </div>
-            ))}
-          </div>
 
-          <div className="relative flex flex-col items-center justify-between">
-            <div className="absolute top-0 bottom-0 w-[2px] border-l-2 border-dashed border-[#1D2939]" />
-            {experiences.map((exp, index) => (
-              <div key={index} className="relative flex items-center justify-center w-12 h-12">
+              <div className="relative flex items-center justify-center w-12 h-12">
                 <div className="absolute w-12 h-12 rounded-full border-2 border-dashed border-[#1D2939] bg-white" />
                 <div className={`w-9 h-9 rounded-full z-10 ${exp.dotColor}`} />
               </div>
-            ))}
-          </div>
 
-          <div className="flex flex-col justify-between w-[444px] h-[400px] gap-[48px]">
-            {experiences.map((exp, index) => (
-              <div key={index} className="flex flex-col gap-[14px]">
+              <div className="flex flex-col gap-[14px]">
                 <CustomeText title={exp.role} className="font-semibold text-[#1D2939] text-[40px]" />
                 {exp.highlights.length > 0 && (
                   <ul className="flex flex-col gap-2">
@@ -210,8 +202,8 @@ export default function Home() {
                   </ul>
                 )}
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -264,7 +256,7 @@ export default function Home() {
           </div>
 
           <ClientOnly>
-            <button className="w-full cursor-pointer sm:w-auto px-6 py-4 rounded-[20px] border border-[#151515] text-[#151515] font-semibold text-2xl sm:text-[28px] transition-all duration-300 hover:bg-[#151515] hover:text-white">
+            <button className="w-full cursor-pointer sm:w-auto px-6 py-3.5 rounded-[60px] border border-[#151515] text-[#151515] font-semibold text-base sm:text-lg transition-all duration-300 hover:bg-[#151515] hover:text-white">
               Hire me
             </button>
           </ClientOnly>
@@ -335,7 +327,7 @@ export default function Home() {
       </div>
 
       {/* Testimonials */}
-      <div className="relative flex flex-col w-full min-h-[900px] items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-[96px]  gap-12 bg-[#171717] overflow-hidden">
+      <div className="relative flex flex-col w-full items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-[96px] gap-12 bg-[#171717] overflow-hidden">
         <Image
           src="/Frame 77.svg"
           alt="image"
@@ -366,7 +358,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="absolute bottom-[20%] left-0 right-0 w-full z-10">
+        <div className="w-full z-10">
           <GenericSlider
             data={reviews}
             slidesPerView={3}

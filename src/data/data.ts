@@ -130,17 +130,53 @@ export const servicesData: CardData[] = [
 export const experiences: Experience[] = [
   {
     company: "Walstar Technologies Pvt. Ltd",
-    duration: "April 2025 – Present",
-    role: "Jr. Software Developer",
-    location: "Kolhapur",
+    duration: "Apr 2025 – Present",
+    role: "Junior Software Engineer",
+    location: "Kolhapur, Maharashtra",
     highlights: [
-      "Built production-grade web applications using React, Next.js and TypeScript.",
-      "Developed scalable backend APIs using Node.js and Express.",
-      "Optimized databases and backend performance.",
-      "Worked in Agile teams using GitHub, Bitbucket and Jira.",
-      "Built reusable UI components using MUI and Tailwind CSS.",
+      "Develop and maintain scalable full-stack web applications using React.js, Next.js, TypeScript, Node.js, Express.js, MongoDB, and PostgreSQL.",
+      "Build responsive and user-friendly interfaces using Material UI, Tailwind CSS, HTML, and CSS.",
+      "Contribute to AI-powered products by integrating LLM-based features and intelligent automation workflows.",
+      "Collaborate in Agile environments using GitHub, Bitbucket, and Jira, with cloud deployment and monitoring on AWS, Vercel, and Sentry.",
+      "Work on microservices-based architectures and optimize performance, database queries, and user experience across web platforms.",
     ],
     dotColor: "bg-[#FD853A]",
+  },
+  {
+    company: "Franchise World",
+    duration: "Aug 2024 – Mar 2025",
+    role: "Frontend Developer Intern",
+    location: "Pune",
+    highlights: [
+      "Developed and deployed full-stack web applications using React.js, Node.js and Flutter.",
+      "Led a team of developers, managing task distribution to meet project deadlines consistently.",
+      "Implemented web design best practices, resulting in a 25% increase in user engagement.",
+    ],
+    dotColor: "bg-[#344054]",
+  },
+  {
+    company: "Cuvette Tech Pvt. Ltd.",
+    duration: "Aug 2023 – Apr 2024",
+    role: "Fullstack Web Development + DSA Intern",
+    location: "Bengaluru",
+    highlights: [
+      "Completed a 6-month Fullstack Web Development + DSA Internship Training Program at Cuvette Tech Pvt. Ltd.",
+      "Trained under top alumni from IIT Kharagpur, Amazon, Myntra and Google.",
+      "Built fullstack web applications while strengthening data structures and algorithms skills.",
+    ],
+    dotColor: "bg-[#FD853A]",
+  },
+  {
+    company: "EPAM Systems",
+    duration: "Jan 2023 – Apr 2023",
+    role: "Frontend Industry Internship",
+    location: "Punjab, India",
+    highlights: [
+      "Completed a frontend developer industry training internship at EPAM Systems.",
+      "Learned the MERN stack (MongoDB, Express.js, React.js, Node.js).",
+      "Built multiple MERN stack projects as part of the internship.",
+    ],
+    dotColor: "bg-[#344054]",
   },
 ];
 
@@ -271,21 +307,33 @@ export const portfolioData: PortfolioItem[] = [
 
 export const reviews: Review[] = [
   {
-    name: "Rajesh Kulkarni",
-    role: "Product Manager",
+    name: "Vishal Randive",
+    role: "Manager, Walstar Technologies",
     rating: 5,
-    text: "Pranil transformed our construction management workflows with an AI-powered platform. The OCR and vector search features he built saved our teams hours every single day.",
+    text: "Pranil consistently delivers high-quality full-stack solutions. His work on React, Next.js and Node.js applications has been reliable, well-architected and production-ready.",
   },
   {
-    name: "Sarah Mitchell",
-    role: "Startup Founder",
+    name: "Prathamesh Patil",
+    role: "QA Engineer",
     rating: 5,
-    text: "Pranil built our global shopping platform from the ground up. Reliable, scalable APIs and an intuitive storefront — our users love the experience.",
+    text: "Having worked closely with Pranil, I can say he writes clean, testable code with great attention to edge cases. He is a fantastic teammate and my best friend in the industry.",
   },
   {
-    name: "Aditya Deshmukh",
-    role: "Engineering Lead",
+    name: "Corey Cawthron",
+    role: "Startup Founder, Granulr",
     rating: 5,
-    text: "The AI-powered habit tracking app he developed is beautifully engineered. Clean code, thoughtful architecture and a fast, responsive UI throughout.",
+    text: "Pranil built our AI-powered habit tracking platform beautifully. Clean code, thoughtful architecture and a fast, responsive UI throughout. He is a joy to work with.",
+  },
+  {
+    name: "Vikas Vitekari",
+    role: "Team Lead",
+    rating: 5,
+    text: "Pranil is a dependable developer who tackles complex features with confidence. His strong grasp of the full stack and performance optimization made our sprints smoother.",
+  },
+  {
+    name: "Sana Jamadar",
+    role: "Assistant Manager, Walstar Technologies",
+    rating: 5,
+    text: "Pranil is proactive, detail-oriented and technically sharp. He consistently meets deadlines and elevates the quality of every project he contributes to.",
   },
 ];
