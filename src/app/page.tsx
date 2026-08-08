@@ -109,7 +109,7 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <div id="about" className="relative flex flex-col w-full max-w-[1299px] gap-10 sm:gap-16 items-center px-4 sm:px-6 lg:px-[71px] pt-12 sm:pt-16 pb-16 sm:pb-24 bg-[#171717] rounded-[30px] sm:rounded-[50px] overflow-hidden -mt-14">
+      <div id="about" className="relative flex flex-col w-full gap-10 sm:gap-16 items-center px-4 sm:px-6 lg:px-[71px] pt-12 sm:pt-16 pb-16 sm:pb-24 bg-[#171717] overflow-hidden -mt-14">
         <Image
           src="/Frame 77.svg"
           alt="image"
