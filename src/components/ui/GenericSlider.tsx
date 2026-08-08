@@ -36,7 +36,6 @@ export function GenericSlider<T extends AllowedCard>({
   const [isClient, setIsClient] = useState(false);
   const isReview = cardType === 'review';
   const isPortfolio = cardType === 'portfolio';
-  const isBlog = cardType === 'blog';
 
   useEffect(() => {
     setIsClient(true);
