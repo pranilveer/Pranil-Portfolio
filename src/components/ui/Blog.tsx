@@ -10,8 +10,8 @@ interface BlogProps extends BlogType {
 
 const Blog: React.FC<BlogProps> = ({ image, button, name, date, title, priority = false }) => {
   return (
-    <div className="flex flex-col w-[416px] h-[699px] items-start gap-[35px]">
-      <div className="relative w-full h-[432px] gap-[10px] items-start group">
+    <div className="flex flex-col w-full max-w-[416px] items-start gap-[35px]">
+      <div className="relative w-full h-[300px] sm:h-[432px] group overflow-hidden">
         <Image
           src={image}
           alt="image"
@@ -20,7 +20,7 @@ const Blog: React.FC<BlogProps> = ({ image, button, name, date, title, priority 
           className="w-full h-full object-cover cursor-pointer"
           priority={priority}
         />
-        <div className="absolute top-[330px] left-[300px] w-[114px] h-[114px] rounded-full bg-[#1D2939] group-hover:bg-[#FD853A] flex items-center justify-center transition-all duration-300">
+        <div className="absolute -bottom-[12px] right-[2px] w-[114px] h-[114px] rounded-full bg-[#1D2939] group-hover:bg-[#FD853A] flex items-center justify-center transition-all duration-300">
           <ArrowButton
             className="transition-all duration-300 stroke-white -rotate-45"
             height={114}
@@ -36,18 +36,18 @@ const Blog: React.FC<BlogProps> = ({ image, button, name, date, title, priority 
           </button>
         </ClientOnly>
 
-        <div className="flex items-start gap-[35px]">
+        <div className="flex flex-wrap items-start gap-x-4 gap-y-2 sm:gap-[35px]">
           <div className="flex items-center gap-2.5">
             <span className="bg-[#FD853A] w-[9px] h-[9px] rounded-full"></span>
-            <span className="text-[#344054] text-[20px]">{name}</span>
+            <span className="text-[#344054] text-base sm:text-[20px]">{name}</span>
           </div>
           <div className="flex items-center gap-2.5">
             <span className="bg-[#FD853A] w-[9px] h-[9px] rounded-full"></span>
-            <span className="text-[#344054] text-[20px]">{date}</span>
+            <span className="text-[#344054] text-base sm:text-[20px]">{date}</span>
           </div>
         </div>
 
-        <h3 className="w-[416px] h-[84px] text-[32px] text-[#344054]">
+        <h3 className="w-full text-2xl sm:text-[32px] leading-snug text-[#344054]">
           {title}
         </h3>
       </div>

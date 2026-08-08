@@ -335,7 +335,7 @@ export default function Home() {
       </div>
 
       {/* Testimonials */}
-      <div className="relative flex flex-col w-full min-h-[900px] items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-[96px]  gap-12 bg-[#171717] rounded-[30px] sm:rounded-[40px] lg:rounded-[50px] overflow-hidden">
+      <div className="relative flex flex-col w-full min-h-[900px] items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-[96px]  gap-12 bg-[#171717] overflow-hidden">
         <Image
           src="/Frame 77.svg"
           alt="image"
@@ -461,10 +461,10 @@ export default function Home() {
       </div>
 
       {/* Blog */}
-      <div className="flex flex-col w-fll h-fit items-center gap-12 px-[71px] py-[97px]">
-        <div className="w-[1298px] h-[126px] flex flex-col lg:flex-row items-center justify-between gap-6 mb-6 md:mb-0">
-          <h1 className="text-[#344054] w-fit md:min-w-[215px] h-full font-bold text-4xl md:text-5xl">From my blog post</h1>
-          <OrangeButton title="See All" className="w-[300px] md:w-fit" />
+      <div className="flex flex-col w-full h-fit items-center gap-10 sm:gap-12 px-4 sm:px-6 lg:px-[71px] py-12 sm:py-20 lg:py-[97px]">
+        <div className="w-full flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
+          <h1 className="text-[#344054] text-center sm:text-left font-bold text-4xl sm:text-5xl lg:text-6xl">From my blog post</h1>
+          <OrangeButton title="See All" />
         </div>
         <GenericSlider
           data={blogs}
