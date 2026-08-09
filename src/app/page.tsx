@@ -81,11 +81,11 @@ export default function Home() {
             </div>
 
             <Image
-              src="/girl.svg"
+              src="/boy.svg"
               alt="abhiruchi"
-              width={952}
-              height={636}
-              className="absolute inset-0 z-20 w-full h-full object-cover object-top md:static md:h-auto md:object-contain md:mt-5"
+              width={1254}
+              height={1254}
+              className="absolute inset-0 z-20 w-full h-full object-cover object-top md:static md:h-auto md:object-contain md:mt-5 md:max-w-[460px]"
               priority
             />
 
@@ -209,9 +209,9 @@ export default function Home() {
 
       {/* Hire Me */}
       <div className="w-full flex flex-col lg:flex-row items-center justify-between px-6 lg:px-[71px] py-20 lg:py-[122px] bg-[#F2F4F7] rounded-[32px] lg:rounded-[50px] gap-12 lg:gap-[96px]">
-        <div className="relative w-full max-w-[500px] aspect-square group mx-auto lg:mx-0">
+        <div className="relative w-full max-w-[440px] aspect-[2/3] group mx-auto lg:mx-0">
           <Image
-            src="/Property 1=Default.svg"
+            src="/Property 1=Default3.svg"
             alt="Hire me"
             fill
             className="object-contain z-10 transition-all duration-300 ease-in-out group-hover:translate-y-3"
