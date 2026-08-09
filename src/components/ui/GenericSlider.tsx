@@ -50,7 +50,7 @@ export function GenericSlider<T extends AllowedCard>({
             {data.slice(0, 3).map((item, index) => (
               <div key={index} className="flex-shrink-0 w-full max-w-sm">
                 {cardType === 'hover' && 'title' in item && 'description' in item && 'tech' in item && (
-                  <ServicesCard title={item.title} description={item.description} tech={item.tech} />
+                  <ServicesCard title={item.title} description={item.description} tech={item.tech} imageSrc={item.imageSrc} priority={index === 0} />
                 )}
                 {cardType === 'portfolio' && 'image' in item && 'href' in item && 'desc' in item && 'tags' in item && (
                   <PortfolioCard
@@ -134,7 +134,7 @@ export function GenericSlider<T extends AllowedCard>({
               className={`${isReview ? '!flex' : '!flex justify-center'}`}
             >
               {cardType === 'hover' && 'title' in item && 'description' in item && 'tech' in item && (
-                <ServicesCard title={item.title} description={item.description} tech={item.tech} />
+                <ServicesCard title={item.title} description={item.description} tech={item.tech} imageSrc={item.imageSrc} priority={index === 0} />
               )}
               {cardType === 'portfolio' && 'image' in item && 'href' in item && 'desc' in item && 'tags' in item && (
                 <PortfolioCard

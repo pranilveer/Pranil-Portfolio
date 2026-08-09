@@ -49,6 +49,7 @@ export interface CardData {
   title: string;
   description: string;
   tech: string[];
+  imageSrc?: string;
 }
 
 export const contact = {
@@ -89,30 +90,35 @@ export const servicesData: CardData[] = [
     description:
       "Building responsive, accessible and high-performance interfaces with a modern React ecosystem.",
     tech: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Material UI"],
+    imageSrc: "/frontend_development.svg",
   },
   {
     title: "Backend Development",
     description:
       "Designing scalable REST APIs with robust authentication, authorization and clean business logic.",
     tech: ["Node.js", "Express", "REST APIs", "Authentication", "Authorization"],
+    imageSrc: "/backend_development.svg",
   },
   {
     title: "Database Design",
     description:
       "Modeling reliable data layers with MongoDB and PostgreSQL, including geospatial queries with PostGIS.",
     tech: ["MongoDB", "PostgreSQL", "PostGIS"],
+    imageSrc: "/database_design.svg",
   },
   {
     title: "Cloud & DevOps",
     description:
       "Deploying and scaling applications on AWS with Docker, CI/CD pipelines and Vercel.",
     tech: ["AWS", "Docker", "CI/CD", "Vercel"],
+    imageSrc: "/cloud_devops.svg",
   },
   {
     title: "AI Integration",
     description:
       "Shipping intelligent features powered by OpenAI APIs, OCR, vector search and semantic search.",
     tech: ["OpenAI API", "OCR", "Vector Search", "Semantic Search"],
+    imageSrc: "/ai_integration.svg",
   },
   {
     title: "Performance Optimization",
@@ -124,6 +130,7 @@ export const servicesData: CardData[] = [
       "Core Web Vitals",
       "Clean Architecture",
     ],
+    imageSrc: "/performance_optimization.svg",
   },
 ];
 
