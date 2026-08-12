@@ -33,6 +33,7 @@ export interface PortfolioItem {
   href: string;
   desc: string;
   tags: string[];
+  category?: string[];
   liveDemo: string;
   github: string;
   caseStudy: string;
@@ -58,6 +59,10 @@ export const contact = {
   location: "Kolhapur, Maharashtra",
   github: "https://github.com/pranilveer",
   linkedin: "https://linkedin.com/in/pranilveer",
+  twitter: "https://x.com/pranilveer",
+  instagram: "https://www.instagram.com/veerpranil",
+  youtube: "https://www.youtube.com/@veerpranil",
+  leetcode: "https://leetcode.com/pranilveer",
   resume: "/resume.pdf",
 };
 
@@ -286,6 +291,7 @@ export const portfolioData: PortfolioItem[] = [
     href: "#",
     desc: "AI-powered construction management platform featuring OCR, vector search, voice reporting and a microservices architecture.",
     tags: ["React", "Node.js", "AWS", "Docker", "MongoDB", "PostGIS", "FastAPI"],
+    category: ["AI", "Full Stack", "Cloud", "Web Apps"],
     liveDemo: "https://app.bynaus.ai/",
     github: "#",
     caseStudy: "#",
@@ -296,6 +302,7 @@ export const portfolioData: PortfolioItem[] = [
     href: "#",
     desc: "Global shopping platform with automation features, product management and Telegram integration.",
     tags: ["Next.js", "React", "Node.js", "PostgreSQL", "Telegram Bot"],
+    category: ["Full Stack", "Web Apps"],
     liveDemo: "https://www.lerbee.com/",
     github: "#",
     caseStudy: "#",
@@ -306,8 +313,31 @@ export const portfolioData: PortfolioItem[] = [
     href: "#",
     desc: "AI-powered habit tracking application integrating physical notebooks with intelligent digital tracking.",
     tags: ["React", "TypeScript", "Node", "MongoDB", "OpenAI"],
+    category: ["AI", "Full Stack", "Web Apps"],
     liveDemo: "https://www.livegranulr.com/",
     github: "#",
+    caseStudy: "#",
+  },
+  {
+    image: "/apex_dashboard.svg",
+    title: "DailyTracker (Apex)",
+    href: "#",
+    desc: "All-in-one productivity and job-prep platform for developers — LeetCode tracking with spaced repetition, habits, GitHub activity, interview & job pipelines, analytics, gamification and an AI Career Coach.",
+    tags: ["Next.js", "React 19", "TypeScript", "Tailwind CSS", "MongoDB", "NextAuth", "Groq API"],
+    category: ["AI", "Full Stack", "Web Apps"],
+    liveDemo: "https://apexcodecrux.vercel.app/",
+    github: "https://github.com/pranilveer/apex",
+    caseStudy: "#",
+  },
+  {
+    image: "/leadflow_dashboard.svg",
+    title: "LeadFlow CRM",
+    href: "#",
+    desc: "Full-featured CRM for sales teams to track and manage leads through a complete pipeline — role-based access, bulk operations, activity logging, CSV import/export and data backup.",
+    tags: ["React", "Vite", "Express", "MongoDB", "JWT", "Tailwind CSS"],
+    category: ["Full Stack", "Web Apps"],
+    liveDemo: "https://leadflow-codecrux.vercel.app/",
+    github: "https://github.com/pranilveer/leadflow",
     caseStudy: "#",
   },
 ];

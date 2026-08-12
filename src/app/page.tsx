@@ -4,9 +4,9 @@ import DualToggleButtons from "@/components/ui/DualButtons";
 import MobileExperienceItem from "@/components/MobileExperienceItem";
 import Image from "next/image";
 import { Star } from "lucide-react";
-import OrangeButton from "@/components/ui/OrangeButton";
-import ArrowButton from "@/components/ui/ArrowButton";
-import { hero, servicesData, experiences, stats, buttons, iconAndText, skills, blogs, portfolioData, reviews } from '../data/data';
+import PortfolioSection from "@/components/PortfolioSection";
+import { ScrollToContactButton, SendMessageButton } from "@/components/ui/ActionButtons";
+import { hero, servicesData, experiences, stats, buttons, iconAndText, skills, portfolioData, reviews } from '../data/data';
 import { GenericSlider } from "@/components/ui/GenericSlider";
 import ClientOnly from "@/components/ui/ClientOnly";
 
@@ -140,11 +140,11 @@ export default function Home() {
       </div>
 
       {/* Work Experience */}
-      <div id="experience" className="w-full min-h-[600px] flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
-        <div className="w-full h-auto lg:h-[234px] flex lg:flex-row items-start justify-center space-x-2.5 mb-8 lg:mb-16 text-center lg:text-left">
-          <CustomeText title="My" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#344054]" />
-          <CustomeText title="Work" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#FD853A]" />
-          <CustomeText title="Experience" className="font-medium text-4xl sm:text-5xl lg:text-6xl text-[#FD853A]" />
+      <div id="experience" className="w-full flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
+        <div className="w-full h-auto flex lg:flex-row items-start justify-center space-x-2.5 mb-8 lg:mb-12 text-center lg:text-left">
+          <CustomeText title="My" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#344054]" />
+          <CustomeText title="Work" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#FD853A]" />
+          <CustomeText title="Experience" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#FD853A]" />
         </div>
 
         <div className="w-full lg:hidden">
@@ -156,10 +156,10 @@ export default function Home() {
         <div className="relative w-full hidden lg:block">
           <div className="absolute top-0 bottom-0 left-[558px] w-[2px] border-l-2 border-dashed border-[#1D2939]" />
           {experiences.map((exp, index) => (
-            <div key={index} className="relative grid grid-cols-[495px_48px_1fr] items-start gap-x-10 mb-16 last:mb-0">
+            <div key={index} className="relative grid grid-cols-[495px_48px_1fr] items-start gap-x-10 mb-12 last:mb-0">
               <div className="flex flex-col gap-[14px]">
-                <CustomeText title={exp.company} className="font-semibold text-[#1D2939] text-[40px]" />
-                <CustomeText title={`${exp.duration} • ${exp.location}`} className="text-2xl text-[#98A2B3]" />
+                <CustomeText title={exp.company} className="font-semibold text-[#1D2939] text-2xl lg:text-3xl" />
+                <CustomeText title={`${exp.duration} • ${exp.location}`} className="text-base lg:text-lg text-[#98A2B3]" />
               </div>
 
               <div className="relative flex items-center justify-center w-12 h-12">
@@ -168,11 +168,11 @@ export default function Home() {
               </div>
 
               <div className="flex flex-col gap-[14px]">
-                <CustomeText title={exp.role} className="font-semibold text-[#1D2939] text-[40px]" />
+                <CustomeText title={exp.role} className="font-semibold text-[#1D2939] text-2xl lg:text-3xl" />
                 {exp.highlights.length > 0 && (
                   <ul className="flex flex-col gap-2">
                     {exp.highlights.map((point, i) => (
-                      <li key={i} className="flex items-start gap-3 text-2xl text-[#98A2B3]">
+                      <li key={i} className="flex items-start gap-3 text-base lg:text-lg text-[#98A2B3]">
                         <span className="mt-3 w-2 h-2 rounded-full bg-[#FD853A] flex-shrink-0" />
                         <span>{point}</span>
                       </li>
@@ -186,7 +186,7 @@ export default function Home() {
       </div>
 
       {/* Hire Me */}
-      <div className="w-full flex flex-col lg:flex-row items-center justify-between px-6 lg:px-[71px] py-20 lg:py-[122px] bg-[#F2F4F7] rounded-[32px] lg:rounded-[50px] gap-12 lg:gap-[96px]">
+      <div className="w-full flex flex-col lg:flex-row items-center justify-between px-6 lg:px-[71px] py-10 lg:py-12 bg-[#F2F4F7] rounded-[32px] lg:rounded-[50px] gap-12 lg:gap-[96px]">
         <div className="relative w-full max-w-[440px] aspect-[2/3] group mx-auto lg:mx-0">
           <Image
             src="/Property 1=Default3.svg"
@@ -233,76 +233,14 @@ export default function Home() {
             ))}
           </div>
 
-          <ClientOnly>
-            <button className="w-full cursor-pointer sm:w-auto px-6 py-3.5 rounded-[60px] border border-[#151515] text-[#151515] font-semibold text-base sm:text-lg transition-all duration-300 hover:bg-[#151515] hover:text-white">
-              Hire me
-            </button>
-          </ClientOnly>
+          <ScrollToContactButton className="w-full cursor-pointer sm:w-auto px-6 py-3.5 rounded-[60px] border border-[#151515] text-[#151515] font-semibold text-base sm:text-lg transition-all duration-300 hover:bg-[#151515] hover:text-white">
+            Hire me
+          </ScrollToContactButton>
         </div>
       </div>
 
       {/* Portfolio */}
-      <div id="projects" className="w-full flex flex-col items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-20 gap-10 lg:gap-12">
-        <div className="w-full flex flex-col sm:flex-row justify-between items-start lg:items-center gap-6">
-          <div className="flex flex-col items-start max-w-full lg:max-w-[643px]">
-            <CustomeText
-              title="Lets Have a look at"
-              className="font-semibold text-[32px] sm:text-[48px] lg:text-[64px] text-[#344054]"
-            />
-            <div className="flex items-start justify-start gap-4 flex-wrap">
-              <CustomeText
-                title="my"
-                className="font-semibold text-[32px] sm:text-[48px] lg:text-[64px] text-[#344054]"
-              />
-              <CustomeText
-                title="Portfolio"
-                className="font-semibold text-[32px] sm:text-[48px] lg:text-[64px] text-[#FD853A]"
-              />
-            </div>
-          </div>
-
-          <div className="shrink-0">
-            <OrangeButton title="See All" />
-          </div>
-        </div>
-
-        <div className="w-full flex flex-col items-center gap-10 lg:gap-12 max-w-[1290px]">
-          <GenericSlider
-            data={portfolioData}
-            slidesPerView={2}
-            heightClass="h-auto"
-            cardType="portfolio"
-          />
-
-          <div className="w-full max-w-[947px] flex flex-wrap justify-center gap-4 sm:gap-[14px] items-center">
-            <ClientOnly>
-              {buttons.map((text, index) => (
-                <button
-                  key={index}
-                  className="px-6 sm:px-8 py-3 rounded-[24px] bg-[#F2F4F7] text-[#000000] text-[16px] sm:text-[18px] lg:text-[20px] hover:bg-[#FD853A] hover:text-white transition-colors duration-300"
-                >
-                  {text}
-                </button>
-              ))}
-            </ClientOnly>
-          </div>
-
-          <div className="flex flex-col w-full max-w-[742px] items-start gap-6 px-4 sm:px-0">
-            <div className="flex flex-col sm:flex-row w-full items-start sm:items-center gap-4 sm:gap-[18px]">
-              <CustomeText
-                title="Bynaus AI - Construction Management Platform"
-                className="font-bold text-[28px] sm:text-[32px] lg:text-[40px] text-[#344054]"
-              />
-              <div className="w-[50px] h-[50px] sm:w-[58px] sm:h-[58px] rounded-full bg-[#FD853A] hidden md:flex items-center justify-center transition-all duration-300">
-                <ArrowButton className="transition-all duration-300 stroke-white -rotate-45" />
-              </div>
-            </div>
-            <p className="text-[16px] sm:text-[18px] lg:text-[20px] text-[#344054] text-center sm:text-left">
-              An AI-powered construction management platform featuring OCR, vector search, voice reporting and a microservices architecture built with React, Node.js, AWS, Docker, MongoDB and PostGIS.
-            </p>
-          </div>
-        </div>
-      </div>
+      <PortfolioSection buttons={buttons} portfolioData={portfolioData} />
 
       {/* Testimonials */}
       <div className="relative flex flex-col w-full items-center px-4 sm:px-6 lg:px-[71px] py-12 sm:py-[96px] gap-12 bg-[#171717] overflow-hidden">
@@ -352,40 +290,43 @@ export default function Home() {
         <div className="w-full max-w-4xl text-center flex flex-col items-center gap-4">
           <CustomeText
             title="Let's Build Something"
-            className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-[#344054]"
+            className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-[#344054]"
           />
           <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-4">
             <CustomeText
               title="Amazing"
-              className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-[#344054]"
+              className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-[#344054]"
             />
             <CustomeText
               title="Together"
-              className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[64px] text-[#FD853A]"
+              className="font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-[48px] text-[#FD853A]"
             />
           </div>
         </div>
 
-        <div className="w-full max-w-3xl flex md:flex-row items-center justify-between gap-4 px-3 py-2 md:px-6 md:py-4 rounded-full border border-[#E4E7EC] bg-white">
-          <div className="w-9 h-9 md:w-[50px] md:h-[50px] flex items-center justify-center rounded-full bg-[#FFEAD5] shrink-0">
-            <Image
-              src="/sms.svg"
-              alt="message icon"
-              width={24}
-              height={24}
-            />
-          </div>
-
+        <div className="w-full max-w-3xl lg:max-w-xl rounded-[28px] md:rounded-full border border-[#E4E7EC] bg-white px-3 py-3 md:px-5 md:py-3">
           <ClientOnly>
-            <input
-              type="text"
-              placeholder="Enter Email Address"
-              className="w-full md:flex-1 px-4 py-2 rounded-full text-center md:text-left text-base sm:text-lg outline-none bg-transparent text-[#1D2939] placeholder:text-[#667085]"
-            />
-
-            <button className="w-fit px-6 md:px-12 py-1 md:py-3 rounded-full bg-[#FD853A] hover:bg-[#e4752f] text-white text-lg font-semibold transition duration-300">
-              Send Message
-            </button>
+            <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3">
+              <div className="flex items-center gap-3 md:gap-4 flex-1 min-w-0">
+                <div className="w-10 h-10 md:w-11 md:h-11 lg:w-10 lg:h-10 flex items-center justify-center rounded-full bg-[#FFEAD5] shrink-0">
+                  <Image
+                    src="/sms.svg"
+                    alt="message icon"
+                    width={24}
+                    height={24}
+                  />
+                </div>
+                <input
+                  id="contact-email"
+                  type="text"
+                  placeholder="Enter Email Address"
+                  className="w-full flex-1 min-w-0 bg-transparent outline-none text-base text-center md:text-left text-[#1D2939] placeholder:text-[#667085]"
+                />
+              </div>
+              <SendMessageButton className="w-full md:w-auto shrink-0 px-6 md:px-8 py-2.5 rounded-full bg-[#FD853A] hover:bg-[#e4752f] text-white text-base md:text-sm font-semibold transition duration-300">
+                Send Message
+              </SendMessageButton>
+            </div>
           </ClientOnly>
         </div>
 
@@ -403,20 +344,21 @@ export default function Home() {
       </div>
 
       {/* Skills Slider */}
-      <div id="skills" className="relative w-full h-[147px] bg-[#FB6514] rounded-tl-4xl rounded-br-4xl overflow-hidden">
-        <div className="absolute w-[5000px] h-[63px] bg-white -rotate-2 -mt-2 md:mt-0 md:-rotate-[1.9deg] z-10 -ml-2 flex items-center">
-          <div className="marquee flex gap-8 w-max">
+      <div id="skills" className="relative w-full h-[110px] sm:h-[130px] md:h-[147px] bg-[#FB6514] rounded-tl-4xl rounded-br-4xl overflow-hidden">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[5000px] h-[46px] sm:h-[54px] md:h-[63px] bg-white -rotate-2 md:-rotate-[1.9deg] z-10 flex items-center">
+          <div className="marquee flex gap-6 sm:gap-8 w-max">
             {[...skills, ...skills].map((skill, index) => (
               <div
                 key={index}
-                className="flex items-center gap-5 text-[#000000] text-[48px] whitespace-nowrap"
+                className="flex items-center gap-3 sm:gap-4 md:gap-5 text-[#000000] text-[28px] sm:text-[36px] md:text-[48px] whitespace-nowrap"
               >
                 <svg
-                  width="34"
-                  height="34"
+                  width="24"
+                  height="24"
                   viewBox="0 0 35 35"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="w-6 h-6 sm:w-[30px] sm:h-[30px] md:w-[34px] md:h-[34px] shrink-0"
                 >
                   <path
                     d="M16.4828 0.257982L21.715 12.3411L34.2082 16.5003L22.1251 21.7324L17.9659 34.2256L12.7337 22.1425L0.240553 17.9833L12.3237 12.7512L16.4828 0.257982Z"
@@ -431,6 +373,7 @@ export default function Home() {
       </div>
 
       {/* Blog */}
+      {/* 
       <div className="flex flex-col w-full h-fit items-center gap-10 sm:gap-12 px-4 sm:px-6 lg:px-[71px] py-12 sm:py-20 lg:py-[97px]">
         <div className="w-full flex flex-col sm:flex-row items-center sm:items-start justify-between gap-6">
           <h1 className="text-[#344054] text-center sm:text-left font-bold text-4xl sm:text-5xl lg:text-6xl">From my blog post</h1>
@@ -443,6 +386,7 @@ export default function Home() {
           cardType="blog"
         />
       </div>
+      */}
 
     </div>
   );

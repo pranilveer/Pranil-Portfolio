@@ -7,12 +7,15 @@ export default function DualToggleButtons() {
   const [active, setActive] = useState<"portfolio" | "hire">("portfolio");
 
   const goTo = (target: string) => {
-    window.location.href = target;
+    const section = document.getElementById(target.replace("#", ""));
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const options = [
-    { key: "portfolio", label: "Portfolio", target: "#" },
-    { key: "hire", label: "Hire Me", target: "#" },
+    { key: "portfolio", label: "Portfolio", target: "#projects" },
+    { key: "hire", label: "Hire Me", target: "#contact" },
   ];
 
   return (
