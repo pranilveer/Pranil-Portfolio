@@ -9,6 +9,7 @@ import { ScrollToContactButton, SendMessageButton } from "@/components/ui/Action
 import { hero, servicesData, experiences, stats, buttons, iconAndText, skills, portfolioData, reviews } from '../data/data';
 import { GenericSlider } from "@/components/ui/GenericSlider";
 import ClientOnly from "@/components/ui/ClientOnly";
+import ServicesSection from "@/components/ServicesSection";
 
 export default function Home() {
   return (
@@ -110,34 +111,7 @@ export default function Home() {
       </div>
 
       {/* Services */}
-      <div id="about" className="relative flex flex-col w-full gap-10 sm:gap-16 items-center px-4 sm:px-6 lg:px-[71px] pt-12 sm:pt-16 pb-16 sm:pb-24 bg-[#171717] overflow-hidden md:-mt-14">
-        <Image
-          src="/Frame 77.svg"
-          alt="image"
-          fill
-          className="object-cover absolute opacity-50"
-        />
-
-        <div className="w-full flex flex-col lg:flex-row items-start justify-between gap-6 relative z-10">
-          <div className="flex gap-2.5">
-            <CustomeText title="My" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#FCFCFD]" />
-            <CustomeText title="Services" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#FD853A]" />
-          </div>
-          <p className="w-full lg:w-[578px] font-medium text-base sm:text-lg lg:text-[20px] text-white">
-            Building modern, scalable and maintainable products with a focus on
-            clean architecture, performance and intelligent AI-powered features.
-          </p>
-        </div>
-
-        <div className="relative w-full max-w-[1299px] flex items-start justify-center">
-          <GenericSlider
-            data={servicesData}
-            slidesPerView={3}
-            heightClass="h-[380px] sm:h-[430px]"
-            cardType="hover"
-          />
-        </div>
-      </div>
+      <ServicesSection />
 
       {/* Work Experience */}
       <div id="experience" className="w-full flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
