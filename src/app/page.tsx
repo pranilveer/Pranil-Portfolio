@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Star } from "lucide-react";
 import PortfolioSection from "@/components/PortfolioSection";
 import { ScrollToContactButton, SendMessageButton } from "@/components/ui/ActionButtons";
-import { hero, servicesData, experiences, stats, buttons, iconAndText, skills, portfolioData, reviews } from '../data/data';
+import { hero, experiences, stats, buttons, iconAndText, skills, portfolioData, reviews } from '../data/data';
 import { GenericSlider } from "@/components/ui/GenericSlider";
 import ClientOnly from "@/components/ui/ClientOnly";
 import ServicesSection from "@/components/ServicesSection";
