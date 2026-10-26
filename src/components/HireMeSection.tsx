@@ -49,6 +49,8 @@ export default function HireMeSection() {
   const holdButtonRef = useRef<HTMLButtonElement>(null);
   const fireConfettiRef = useRef<(() => void) | null>(null);
   const resetTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const contactTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const focusTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const holdState = useRef({
     progress: 0,
     holding: false,
@@ -324,6 +326,8 @@ export default function HireMeSection() {
     return () => {
       cancelAnimationFrame(state.raf);
       if (resetTimerRef.current) clearTimeout(resetTimerRef.current);
+      if (contactTimerRef.current) clearTimeout(contactTimerRef.current);
+      if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
     };
   }, []);
 
@@ -356,6 +360,20 @@ export default function HireMeSection() {
       setToast(true);
       setHint(hireMe.hiredHint);
       fireConfettiRef.current?.();
+
+      if (contactTimerRef.current) clearTimeout(contactTimerRef.current);
+      contactTimerRef.current = setTimeout(() => {
+        document
+          .getElementById("contact")
+          ?.scrollIntoView({ behavior: "smooth", block: "center" });
+
+        if (focusTimerRef.current) clearTimeout(focusTimerRef.current);
+        focusTimerRef.current = setTimeout(() => {
+          document
+            .getElementById("contact-email")
+            ?.focus({ preventScroll: true });
+        }, 750);
+      }, 600);
 
       if (resetTimerRef.current) clearTimeout(resetTimerRef.current);
       resetTimerRef.current = setTimeout(() => {

@@ -204,8 +204,8 @@ export const hireMe = {
   hint: "Go on, it's one second.",
   holdLabel: "Hold to hire me",
   hiredLabel: "Hired!",
-  hiredHint: "Hired! Let's talk about your project.",
-  toast: "Offer accepted. Let's build something great.",
+  hiredHint: "Hired! Enter your email below to get started.",
+  toast: "Offer accepted. Opening the contact form...",
   chips: ["React", "Next.js", "Node.js", "AWS"],
 };
 
