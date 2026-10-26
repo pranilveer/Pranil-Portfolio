@@ -1,15 +1,15 @@
 import Navbar from "@/components/Navbar";
 import CustomeText from "@/components/ui/CustomeText";
 import DualToggleButtons from "@/components/ui/DualButtons";
-import MobileExperienceItem from "@/components/MobileExperienceItem";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import PortfolioSection from "@/components/PortfolioSection";
 import { ScrollToContactButton, SendMessageButton } from "@/components/ui/ActionButtons";
-import { hero, experiences, stats, buttons, iconAndText, skills, portfolioData, reviews } from '../data/data';
+import { hero, stats, buttons, iconAndText, skills, portfolioData, reviews } from '../data/data';
 import { GenericSlider } from "@/components/ui/GenericSlider";
 import ClientOnly from "@/components/ui/ClientOnly";
 import ServicesSection from "@/components/ServicesSection";
+import ExperienceSection from "@/components/ExperienceSection";
 
 export default function Home() {
   return (
@@ -114,50 +114,7 @@ export default function Home() {
       <ServicesSection />
 
       {/* Work Experience */}
-      <div id="experience" className="w-full flex flex-col items-start mx-auto px-4 sm:px-6 lg:px-[71px] py-8 lg:py-16">
-        <div className="w-full h-auto flex lg:flex-row items-start justify-center space-x-2.5 mb-8 lg:mb-12 text-center lg:text-left">
-          <CustomeText title="My" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#344054]" />
-          <CustomeText title="Work" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#FD853A]" />
-          <CustomeText title="Experience" className="font-medium text-3xl sm:text-4xl lg:text-5xl text-[#FD853A]" />
-        </div>
-
-        <div className="w-full lg:hidden">
-          {experiences.map((exp, index) => (
-            <MobileExperienceItem key={index} exp={exp} />
-          ))}
-        </div>
-
-        <div className="relative w-full hidden lg:block">
-          <div className="absolute top-0 bottom-0 left-[558px] w-[2px] border-l-2 border-dashed border-[#1D2939]" />
-          {experiences.map((exp, index) => (
-            <div key={index} className="relative grid grid-cols-[495px_48px_1fr] items-start gap-x-10 mb-12 last:mb-0">
-              <div className="flex flex-col gap-[14px]">
-                <CustomeText title={exp.company} className="font-semibold text-[#1D2939] text-2xl lg:text-3xl" />
-                <CustomeText title={`${exp.duration} • ${exp.location}`} className="text-base lg:text-lg text-[#98A2B3]" />
-              </div>
-
-              <div className="relative flex items-center justify-center w-12 h-12">
-                <div className="absolute w-12 h-12 rounded-full border-2 border-dashed border-[#1D2939] bg-white" />
-                <div className={`w-9 h-9 rounded-full z-10 ${exp.dotColor}`} />
-              </div>
-
-              <div className="flex flex-col gap-[14px]">
-                <CustomeText title={exp.role} className="font-semibold text-[#1D2939] text-2xl lg:text-3xl" />
-                {exp.highlights.length > 0 && (
-                  <ul className="flex flex-col gap-2">
-                    {exp.highlights.map((point, i) => (
-                      <li key={i} className="flex items-start gap-3 text-base lg:text-lg text-[#98A2B3]">
-                        <span className="mt-3 w-2 h-2 rounded-full bg-[#FD853A] flex-shrink-0" />
-                        <span>{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <ExperienceSection />
 
       {/* Hire Me */}
       <div className="w-full flex flex-col lg:flex-row items-center justify-between px-6 lg:px-[71px] py-10 lg:py-12 bg-[#F2F4F7] rounded-[32px] lg:rounded-[50px] gap-12 lg:gap-[96px]">
