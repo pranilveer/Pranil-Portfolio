@@ -4,12 +4,13 @@ import DualToggleButtons from "@/components/ui/DualButtons";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import PortfolioSection from "@/components/PortfolioSection";
-import { ScrollToContactButton, SendMessageButton } from "@/components/ui/ActionButtons";
-import { hero, stats, buttons, iconAndText, skills, portfolioData, reviews } from '../data/data';
+import { SendMessageButton } from "@/components/ui/ActionButtons";
+import { hero, buttons, iconAndText, skills, portfolioData, reviews } from '../data/data';
 import { GenericSlider } from "@/components/ui/GenericSlider";
 import ClientOnly from "@/components/ui/ClientOnly";
 import ServicesSection from "@/components/ServicesSection";
 import ExperienceSection from "@/components/ExperienceSection";
+import HireMeSection from "@/components/HireMeSection";
 
 export default function Home() {
   return (
@@ -117,58 +118,7 @@ export default function Home() {
       <ExperienceSection />
 
       {/* Hire Me */}
-      <div className="w-full flex flex-col lg:flex-row items-center justify-between px-6 lg:px-[71px] py-10 lg:py-12 bg-[#F2F4F7] rounded-[32px] lg:rounded-[50px] gap-12 lg:gap-[96px]">
-        <div className="relative w-full max-w-[440px] aspect-[2/3] group mx-auto lg:mx-0">
-          <Image
-            src="/Property 1=Default3.svg"
-            alt="Hire me"
-            fill
-            className="object-contain z-10 transition-all duration-300 ease-in-out group-hover:translate-y-3"
-            priority
-          />
-
-          <Image
-            src="/Property 1=Variant2.svg"
-            alt="Hire me"
-            fill
-            className="object-contain absolute -translate-y-[15px] transition-all duration-300 ease-in-out opacity-0 scale-90 group-hover:opacity-100 group-hover:scale-110"
-            priority
-          />
-        </div>
-
-        <div className="w-full max-w-xl flex flex-col items-start gap-8">
-          <div className="flex flex-wrap text-4xl sm:text-5xl lg:text-6xl font-semibold gap-2">
-            <CustomeText title="Why" className="text-[#344054]" />
-            <CustomeText title="Hire me" className="text-[#FD853A]" />
-            <CustomeText title="?" className="text-[#344054]" />
-          </div>
-
-          <p className="text-[#98A2B3] text-base sm:text-lg lg:text-xl leading-relaxed max-w-md">
-            I enjoy solving real-world business problems by combining modern
-            frontend development, scalable backend architecture, cloud
-            technologies and AI integrations.
-          </p>
-
-          <div className="flex flex-wrap gap-x-12 gap-y-8 w-full">
-            {stats.map((stat, index) => (
-              <div key={index} className="flex flex-col">
-                <CustomeText
-                  title={stat.title}
-                  className="text-[32px] sm:text-[36px] font-medium text-[#1D2939]"
-                />
-                <CustomeText
-                  title={stat.label}
-                  className="text-lg text-[#667085]"
-                />
-              </div>
-            ))}
-          </div>
-
-          <ScrollToContactButton className="w-full cursor-pointer sm:w-auto px-6 py-3.5 rounded-[60px] border border-[#151515] text-[#151515] font-semibold text-base sm:text-lg transition-all duration-300 hover:bg-[#151515] hover:text-white">
-            Hire me
-          </ScrollToContactButton>
-        </div>
-      </div>
+      <HireMeSection />
 
       {/* Portfolio */}
       <PortfolioSection buttons={buttons} portfolioData={portfolioData} />

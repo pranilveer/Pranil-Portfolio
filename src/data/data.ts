@@ -193,11 +193,21 @@ export const experiences: Experience[] = [
 ];
 
 export const stats: Stat[] = [
-  { title: "5+", label: "Production Applications" },
+  { title: "20+", label: "Production Applications" },
   { title: "2+", label: "Years Experience" },
   { title: "Modern", label: "Full Stack Technologies" },
   { title: "AI", label: "Powered Solutions" },
 ];
+
+export const hireMe = {
+  lead: "I enjoy solving real-world business problems by combining modern frontend development, scalable backend architecture, cloud technologies and AI integrations.",
+  hint: "Go on, it's one second.",
+  holdLabel: "Hold to hire me",
+  hiredLabel: "Hired!",
+  hiredHint: "Hired! Let's talk about your project.",
+  toast: "Offer accepted. Let's build something great.",
+  chips: ["React", "Next.js", "Node.js", "AWS"],
+};
 
 export const buttons: string[] = [
   "All",
